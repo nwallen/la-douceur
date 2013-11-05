@@ -1,25 +1,23 @@
-[
+{% capture people %}
+{% for p in site.pages %}
+	{% if p.url contains "/court" %}
+	{
+		"name": "{{p.name}}",
+		"title": "{{p.title}}",
+		"stats": {
+			"baudiness": {{p.baudiness}},
+			"intelligence": {{p.intelligence}},
+			"fashion": {{p.fashion}},
+			"wit": {{p.wit}},
+			"culture": {{p.culture}}
+		}
+	}#
+	{% endif %}
+{% endfor %}
+{% endcapture %}
+
+{% assign array = people | split:"#" %}
+
+[{% for p in array %}{% assign new_length = forloop.length | minus:1 %}{{p}}{% if forloop.index < new_length %},{% endif %}{% endfor %}]
 
 
-	{% for p in site.pages %}
-    	{% if p.url contains "/court" %}
-    	{
-    		"name": "{{p.name}}",
-    		"title": "{{p.title}}",
-    		"stats": {
-    			"baudiness": {{p.baudiness}},
-    			"intelligence": {{p.intelligence}},
-    			"fashion": {{p.fashion}},
-    			"wit": {{p.wit}},
-    			"culture": {{p.culture}}
-    		}
-    	}
-    	{% else %}
-    	{}
-    	
-    	{% endif %}
-    	{% if forloop.last != true %},{% endif %} 
-	{% endfor %}
-
-
-]
