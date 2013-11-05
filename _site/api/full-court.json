@@ -1,0 +1,49 @@
+[
+
+
+	
+    	
+    	{}
+    	
+    	
+    	, 
+	
+    	
+    	{
+    		"name": "Richelieu",
+    		"title": "Cardinal",
+    		"stats": {
+    			"baudiness": -2,
+    			"intelligence": 5,
+    			"fashion": 1,
+    			"wit": 5,
+    			"culture": 5
+    		}
+    	}
+    	
+    	, 
+	
+    	
+    	{
+    		"name": "Voltaire",
+    		"title": "Philosophe",
+    		"stats": {
+    			"baudiness": -2,
+    			"intelligence": 5,
+    			"fashion": 1,
+    			"wit": 5,
+    			"culture": 5
+    		}
+    	}
+    	
+    	, 
+	
+    	
+    	{}
+    	
+    	
+    	 
+	
+
+
+]

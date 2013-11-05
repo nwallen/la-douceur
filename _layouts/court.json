@@ -1,0 +1,25 @@
+[
+
+
+	{% for p in site.pages %}
+    	{% if p.url contains "/court" %}
+    	{
+    		"name": "{{p.name}}",
+    		"title": "{{p.title}}",
+    		"stats": {
+    			"baudiness": {{p.baudiness}},
+    			"intelligence": {{p.intelligence}},
+    			"fashion": {{p.fashion}},
+    			"wit": {{p.wit}},
+    			"culture": {{p.culture}}
+    		}
+    	}
+    	{% else %}
+    	{}
+    	
+    	{% endif %}
+    	{% if forloop.last != true %},{% endif %} 
+	{% endfor %}
+
+
+]
